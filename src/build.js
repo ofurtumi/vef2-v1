@@ -1,11 +1,12 @@
-import { readdir } from 'fs/promises';
+import { readdir, copyFile } from 'fs/promises';
+import path from 'path';
 import { makeHTML, makeSections, makePage } from './make-html.js';
 import { createNumObject } from './num-calc.js';
 
 import { TXTtoNUM } from './txt-to-num.js';
 
 const DIR = './data'
-const BUILT = './public/index.html'
+const BUILT = './dist/index.html'
 
 async function main() {
     const files = await readdir(DIR);
@@ -29,6 +30,8 @@ async function main() {
 
     let parsedSections = await makeSections(sectionObjects);
     let HTML = makeHTML(parsedSections);
+    copyFile('src/main.css','./dist/main.css')
+
 }
 
 main().catch((err) => console.error(err))

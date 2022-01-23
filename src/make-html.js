@@ -4,8 +4,8 @@ import { join } from 'path';
 // const { prettier } = pkg;
 
 
-const INDEX = './public/index.html'
-const PATH = './public'
+const INDEX = './dist/index.html'
+const PATH = './dist'
 const top = `<!DOCTYPE html>
 <html lang="en">
 <head>

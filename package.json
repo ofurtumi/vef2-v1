@@ -5,10 +5,10 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "pretty": "prettier ./public/index.html --write",
+    "pretty": "prettier ./dist/index.html --write",
     "build": "node ./src/build.js && npm run pretty",
     "test": "NODE_OPTIONS='--experimental-vm-modules' jest ./test/*.js",
-    "lint": "stylelint main.css ./public/*.css && eslint ./src/*.js --fix"
+    "lint": "stylelint main.css ./dist/*.css && eslint ./src/*.js --fix"
   },
   "author": "Tumi",
   "license": "ISC",
