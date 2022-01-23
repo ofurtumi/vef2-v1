@@ -7,22 +7,26 @@ export function getStandardDeviation (arr) {
     return Math.round((num + Number.EPSILON) * 100) / 100
   }
 
+function decimals (num) {
+    return Math.round((num + Number.EPSILON) * 100) / 100
+}
+
 export function createNumObject(fileObj) {
     const NAME = fileObj.name;
     const VAR = (fileObj.data[0] && 
-        fileObj.data[1]) ? variance(fileObj.data): 'Not available';
+        fileObj.data[1]) ? decimals(variance(fileObj.data)): 'Not available';
     const MAX = (fileObj.data[0] && 
         fileObj.data[1]) ? Math.max(...fileObj.data): 'Not available';
     const MEAN = (fileObj.data[0] && 
-        fileObj.data[1]) ? mean(fileObj.data): 'Not available';
+        fileObj.data[1]) ? decimals(mean(fileObj.data)): 'Not available';
     const MED = (fileObj.data[0] && 
-        fileObj.data[1]) ? median(fileObj.data): 'Not available';
+        fileObj.data[1]) ? decimals(median(fileObj.data)): 'Not available';
     const MIN = (fileObj.data[0] && 
         fileObj.data[1]) ? Math.min(...fileObj.data): 'Not available';
     const SDEV = (fileObj.data[0] && 
         fileObj.data[1]) ? getStandardDeviation(fileObj.data): 'Not available';
     const SUM = (fileObj.data[0] && 
-        fileObj.data[1]) ? sum(fileObj.data): 'Not available';
+        fileObj.data[1]) ? decimals(sum(fileObj.data)): 'Not available';
     const RANGE = (fileObj.data[0] && 
         fileObj.data[1]) ? MAX - MIN: 'Not available';
     const f = NAME.split('.')[0];
