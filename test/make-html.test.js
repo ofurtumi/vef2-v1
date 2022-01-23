@@ -23,14 +23,14 @@ describe('make-html sections', () => {
     expect(body).toBe(`<section>
 <h1>test</h1>
 <ul>
-    <li>variance: 10</li>
-    <li>max: 50</li>
-    <li>mean: 25</li>
-    <li>median: 10</li>
-    <li>min: 50</li>
-    <li>s. deviation: 20</li>
-    <li>sum: 500</li>
-    <li>range: 6</li>
+    <li><p>variance: </p><p>10</p></li>
+    <li><p>max: </p><p>50</p></li>
+    <li><p>mean: </p><p>25</p></li>
+    <li><p>median: </p><p>10</p></li>
+    <li><p>min: </p><p>50</p></li>
+    <li><p>s. deviation: </p><p>20</p></li>
+    <li><p>sum: </p><p>500</p></li>
+    <li><p>range: </p><p>6</p></li>
 </ul>
 <a href="test.html">more info</a>
 </section>`)

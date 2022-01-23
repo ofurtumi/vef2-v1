@@ -31,14 +31,14 @@ export function makeSections(objArray) {
         section += `<section>
 <h1>${obj.name}</h1>
 <ul>
-    <li>variance: ${obj.var}</li>
-    <li>max: ${obj.max}</li>
-    <li>mean: ${obj.mean}</li>
-    <li>median: ${obj.med}</li>
-    <li>min: ${obj.min}</li>
-    <li>s. deviation: ${obj.sdev}</li>
-    <li>sum: ${obj.sum}</li>
-    <li>range: ${obj.range}</li>
+    <li><p>variance: </p><p>${obj.var}</p></li>
+    <li><p>max: </p><p>${obj.max}</p></li>
+    <li><p>mean: </p><p>${obj.mean}</p></li>
+    <li><p>median: </p><p>${obj.med}</p></li>
+    <li><p>min: </p><p>${obj.min}</p></li>
+    <li><p>s. deviation: </p><p>${obj.sdev}</p></li>
+    <li><p>sum: </p><p>${obj.sum}</p></li>
+    <li><p>range: </p><p>${obj.range}</p></li>
 </ul>
 <a href="${obj.link}">more info</a>
 </section>`

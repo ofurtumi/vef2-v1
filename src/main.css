@@ -34,11 +34,18 @@ main {
     padding: 2em;
 }
 
-main li {
+li {
     font-size: 1.25 em;
-    padding: 0.25em;
     display: flex;
     justify-content: space-between;
+}
+
+li p {
+    margin:  0;
+}
+
+main li {
+    padding: 0.25em;
 }
 
 main li p {
