@@ -1,5 +1,5 @@
-import { mkdir, stat } from 'fs';
-import { readdir, copyFile,  } from 'fs/promises';
+import { stat } from 'fs';
+import { readdir, copyFile, mkdir } from 'fs/promises';
 import { makeHTML, makeSections, makePage } from './make-html.js';
 import { createNumObject } from './num-calc.js';
 
