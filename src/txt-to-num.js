@@ -9,18 +9,16 @@ export async function TXTtoNUM(file) {
     const dataStr = data.toString('utf-8');
     // const arr = dataStr.split('\n').map((item) => parseInt(item, 10))
     const arr = dataStr.split('\n').map((item) => {
-        if (item.includes(".")) item = item.replaceAll('.',''); 
-        if (item.includes(",")) item = item.replaceAll(',','.');
+        if (item.includes('.')) item = item.replaceAll('.',''); 
+        if (item.includes(',')) item = item.replaceAll(',','.');
         if (item === '') return NaN;
         return Number(item);
     });
 
-    const newArray = arr.filter(function (value) {
-        return !Number.isNaN(value);
-    });
+    const newArray = arr.filter((value) => !Number.isNaN(value));
     
 
-    let numObj = {"name": file, "data": newArray}
+    const numObj = {'name': file, 'data': newArray}
     // console.log('obj -> ',path,' -> ',arr)
     
     return numObj;
