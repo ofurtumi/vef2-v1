@@ -20,6 +20,7 @@ module.exports = {
       ],
       'import/extensions': 0,
       'no-await-in-loop': 0,
+      'no-restricted-globals': 0,
       'prefer-destructuring': 0,
       'no-param-reassign': 0,
       'max-len': ['warn', {

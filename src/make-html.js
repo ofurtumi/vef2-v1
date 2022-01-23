@@ -61,7 +61,7 @@ export function makePage(obj) {
 export function makeSections(objArray) {
     let section = '';
     objArray.forEach(obj => {
-        if (!Number.isNaN(obj.var)) {
+        if (!isNaN(obj.var)) {
         section += `<section>
 <h1>${obj.name}</h1>
 <ul>
