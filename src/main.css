@@ -9,6 +9,11 @@ body {
     gap: 1em;
 }
 
+header {
+    grid-column: span 3;
+    text-align: center;
+}
+
 section {
     border: 5px solid black;
     border-radius: 5px;

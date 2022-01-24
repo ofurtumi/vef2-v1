@@ -78,6 +78,10 @@ describe('make-html HTML', () => {
     <link rel="stylesheet" href="main.css">
     <title>tölur</title>
 </head>
+<header>
+    <p>information calculated from data.txt files</p>
+    <p>all decimals are rounded up to two points to make everything easier to read</p>
+</header>
 <body>
 <section><ul><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li></ul></section>
 </body>
