@@ -22,7 +22,7 @@ async function main() {
     }
 
     const files = await readdir(DIR);
-    console.log('files: ', files);
+    console.info('files: ', files);
 
     // moves the 10,11 and 12.txt files to teh end
     files.splice(11, 0, files.splice(1, 1)[0]);

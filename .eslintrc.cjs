@@ -15,7 +15,7 @@ module.exports = {
       'no-console': [
         'warn',
         {
-          allow: ['log','warn', 'error', 'info', 'group', 'groupCollapsed', 'groupEnd'],
+          allow: ['warn', 'error', 'info', 'group', 'groupCollapsed', 'groupEnd'],
         },
       ],
       'import/extensions': 0,
