@@ -74,7 +74,7 @@ export function makeSections(objArray) {
     <li><p>mean: </p><p>${obj.mean}</p></li>
     <li><p>median: </p><p>${obj.med}</p></li>
     <li><p>min: </p><p>${obj.min}</p></li>
-    <li><p>s. deviation: </p><p>${obj.sdev}</p></li>
+    <li><p>s.dev: </p><p>${obj.sdev}</p></li>
     <li><p>sum: </p><p>${obj.sum}</p></li>
     <li><p>range: </p><p>${obj.range}</p></li>
 </ul>

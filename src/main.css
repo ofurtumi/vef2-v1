@@ -11,12 +11,12 @@ body {
 
 header {
     grid-column: span 3;
-    text-align: center;
+    /* text-align: center; */
 }
 
 section {
     border: 5px solid black;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 0.5em;
 }
 
@@ -36,7 +36,7 @@ main {
     align-self: center;
     margin: auto;
     border: 5px solid black;
-    border-radius: 7px;
+    border-radius: 10px;
     padding: 2em;
 }
 
@@ -63,6 +63,9 @@ div {
 }
 
 a {
+    width: 100%;
+    text-align: end;
+    display: block;
     color: darkslategray;
     font-size: 1.25em;
     font-weight: bold;
@@ -72,3 +75,29 @@ a {
 a:hover, a:focus-visible {
     color: black;
 }
+
+@media screen and (max-width: 1000px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        width: 85%;
+    }
+
+    section {
+        padding: 2em;
+    }
+
+    section li {
+        flex-wrap: wrap;
+    }
+
+    main {
+        width: auto;
+    }
+}
+
+/* @media screen and (max-width: 750px) {
+    section li {
+        flex-direction: column;
+    }
+} */
