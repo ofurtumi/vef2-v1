@@ -32,7 +32,7 @@ describe('make-html sections', () => {
     <li><p>sum: </p><p>500</p></li>
     <li><p>range: </p><p>6</p></li>
 </ul>
-<a href="test.html">more info</a>
+<span><a href="test.html">more info</a><span>
 </section>`)
   });
 });

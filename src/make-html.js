@@ -55,7 +55,7 @@ export function makePage(obj) {
     <h2>raw data:</h2>
     <div><p>${obj.raw}</p></div>
     </main>
-    <a href="./index.html">home</a>
+    <span><a href="./index.html">home</a><span>
     </body>
     </html>`
 
@@ -78,7 +78,7 @@ export function makeSections(objArray) {
     <li><p>sum: </p><p>${obj.sum}</p></li>
     <li><p>range: </p><p>${obj.range}</p></li>
 </ul>
-<a href="${obj.link}">more info</a>
+<span><a href="${obj.link}">more info</a></span>
 </section>`
         
         makePage(obj);

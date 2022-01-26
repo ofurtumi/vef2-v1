@@ -62,10 +62,13 @@ div {
     word-break: break-word;
 }
 
-a {
+span {
     width: 100%;
     text-align: end;
     display: block;
+}
+
+a {
     color: darkslategray;
     font-size: 1.25em;
     font-weight: bold;
