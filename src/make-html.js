@@ -1,11 +1,10 @@
-import { writeFile } from 'fs/promises'
-import { join } from 'path';
+import { writeFile } from "fs/promises";
+import { join } from "path";
 // import pkg from 'prettier';
 // const { prettier } = pkg;
 
-
-const INDEX = './dist/index.html'
-const PATH = './dist'
+const INDEX = "./dist/index.html";
+const PATH = "./dist";
 const top = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,10 +26,10 @@ const bottom = `
 </html>`;
 
 export function makePage(obj) {
-    let link = obj.name;
-    link = link.split('.')[0];
-    link = join(PATH,(`${link}.html`))
-    const page = `<!DOCTYPE html>
+	let link = obj.name;
+	link = link.split(".")[0];
+	link = join(PATH, `${link}.html`);
+	const page = `<!DOCTYPE html>
     <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -57,16 +56,16 @@ export function makePage(obj) {
     </main>
     <span><a href="./index.html">home</a><span>
     </body>
-    </html>`
+    </html>`;
 
-    writeFile(link,page)
+	writeFile(link, page);
 }
 
 export function makeSections(objArray) {
-    let section = '';
-    objArray.forEach(obj => {
-        if (!isNaN(obj.var)) {
-        section += `<section>
+	let section = "";
+	objArray.forEach((obj) => {
+		if (!isNaN(obj.var)) {
+			section += `<section>
 <h1>${obj.name}</h1>
 <ul>
     <li><p>variance: </p><p>${obj.var}</p></li>
@@ -79,26 +78,24 @@ export function makeSections(objArray) {
     <li><p>range: </p><p>${obj.range}</p></li>
 </ul>
 <span><a href="${obj.link}">more info</a></span>
-</section>`
-        
-        makePage(obj);
-}
-        else {
-            section += `<section>
+</section>`;
+
+			makePage(obj);
+		} else {
+			section += `<section>
 <h1>${obj.name}</h1>
     <p>data is corrupted or wrong</p>
-</section>`
-            
-        }
-    });
-    return section
+</section>`;
+		}
+	});
+	return section;
 }
 
 export function makeHTML(body) {
-    let HTML = top;
-    HTML += body;
-    HTML += bottom;
-    // HTML = prettier.format(HTML, {parser: "html"});
-    writeFile(INDEX,HTML)
-    return HTML;
+	let HTML = top;
+	HTML += body;
+	HTML += bottom;
+	// HTML = prettier.format(HTML, {parser: "html"});
+	writeFile(INDEX, HTML);
+	return HTML;
 }
