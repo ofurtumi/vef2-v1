@@ -1,11 +1,11 @@
-import { readdir, copyFile, mkdir, stat } from "fs/promises";
-import { makeHTML, makeSections } from "./make-html.js";
-import { createNumObject } from "./num-calc.js";
+import { readdir, copyFile, mkdir, stat } from 'fs/promises';
+import { makeHTML, makeSections } from './make-html.js';
+import { createNumObject } from './num-calc.js';
 
-import { TXTtoNUM } from "./txt-to-num.js";
+import { TXTtoNUM } from './txt-to-num.js';
 
-const DIR = "./data";
-const OUT_DIR = "./dist";
+const DIR = './data';
+const OUT_DIR = './dist';
 
 async function direxists(dir) {
 	try {
@@ -22,7 +22,7 @@ async function main() {
 	}
 
 	const files = await readdir(DIR);
-	console.info("files: ", files);
+	console.info('files: ', files);
 
 	// moves the 10,11 and 12.txt files to teh end
 	files.splice(11, 0, files.splice(1, 1)[0]);
@@ -42,7 +42,7 @@ async function main() {
 
 	const parsedSections = await makeSections(sectionObjects);
 	makeHTML(parsedSections);
-	copyFile("src/main.css", "./dist/main.css");
+	copyFile('src/main.css', './dist/main.css');
 }
 
 main().catch((err) => console.error(err));

@@ -1,11 +1,11 @@
-import { describe, expect, it } from "@jest/globals";
-import { makeHTML, makeSections } from "../src/make-html";
+import { describe, expect, it } from '@jest/globals';
+import { makeHTML, makeSections } from '../src/make-html';
 
-describe("make-html sections", () => {
-	it("takes array of arrays and creates sections from each of the inner arrays", () => {
+describe('make-html sections', () => {
+	it('takes array of arrays and creates sections from each of the inner arrays', () => {
 		const input = [
 			{
-				name: "test",
+				name: 'test',
 				var: 10,
 				max: 50,
 				mean: 25,
@@ -14,7 +14,7 @@ describe("make-html sections", () => {
 				sdev: 20,
 				sum: 500,
 				range: 6,
-				link: "test.html",
+				link: 'test.html',
 			},
 		];
 
@@ -37,11 +37,11 @@ describe("make-html sections", () => {
 	});
 });
 
-describe("make-html NaN test", () => {
-	it("checks if item is NaN and does not return it if thats the case", () => {
+describe('make-html NaN test', () => {
+	it('checks if item is NaN and does not return it if thats the case', () => {
 		const input = [
 			{
-				name: "test",
+				name: 'test',
 				var: NaN,
 				max: NaN,
 				mean: NaN,
@@ -50,7 +50,7 @@ describe("make-html NaN test", () => {
 				sdev: NaN,
 				sum: NaN,
 				range: NaN,
-				link: "test.html",
+				link: 'test.html',
 			},
 		];
 
@@ -63,10 +63,10 @@ describe("make-html NaN test", () => {
 	});
 });
 
-describe("make-html HTML", () => {
-	it("takes body string and adds top and bottom", () => {
+describe('make-html HTML', () => {
+	it('takes body string and adds top and bottom', () => {
 		const input =
-			"<section><ul><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li></ul></section>";
+			'<section><ul><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li></ul></section>';
 
 		const html = makeHTML(input);
 		// console.log(html)

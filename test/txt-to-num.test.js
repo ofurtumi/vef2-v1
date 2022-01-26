@@ -1,9 +1,9 @@
-import { describe, expect, it } from "@jest/globals";
-import { TXTtoNUM } from "../src/txt-to-num";
+import { describe, expect, it } from '@jest/globals';
+import { TXTtoNUM } from '../src/txt-to-num';
 
-describe("text to number", () => {
-	it("takes txt file checks if it has numbers and returns them as an array", async () => {
-		const input = "1.txt"; // destination to .txt file
+describe('text to number', () => {
+	it('takes txt file checks if it has numbers and returns them as an array', async () => {
+		const input = '1.txt'; // destination to .txt file
 		const reference = [688, 904, 607, 299];
 		const parsed = await TXTtoNUM(input);
 		for (let i = 0; i < parsed.length; i++) {
@@ -12,9 +12,9 @@ describe("text to number", () => {
 	});
 });
 
-describe("text to number 2", () => {
-	it("takes txt file checks if it has numbers and returns ", async () => {
-		const input = "3.txt"; // destination to .txt file
+describe('text to number 2', () => {
+	it('takes txt file checks if it has numbers and returns ', async () => {
+		const input = '3.txt'; // destination to .txt file
 		const reference = [NaN, NaN, NaN];
 		const parsed = await TXTtoNUM(input);
 		for (let i = 0; i < parsed.length; i++) {
@@ -23,9 +23,9 @@ describe("text to number 2", () => {
 	});
 });
 
-describe("text to number 3", () => {
-	it("takes txt file checks if it has numbers and returns ", async () => {
-		const input = "5.txt"; // destination to .txt file
+describe('text to number 3', () => {
+	it('takes txt file checks if it has numbers and returns ', async () => {
+		const input = '5.txt'; // destination to .txt file
 		const reference = [
 			995084,
 			761358,
